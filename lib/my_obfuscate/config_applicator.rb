@@ -57,6 +57,10 @@ class MyObfuscate
             FFaker::AddressUS.zip_code
           when :phone
             clean_quotes FFaker::PhoneNumber.phone_number
+          when :nifES
+            clean_quotes FFaker::IdentificationES.nif
+          when :nifPT
+            clean_quotes FFaker::IdentificationPT.nif
           when :company
             clean_bad_whitespace(clean_quotes(FFaker::Company.name))
           when :ipv4
